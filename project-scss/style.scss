@@ -1,0 +1,59 @@
+*{margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+html, body{
+  height: 100%;
+  width: 100%;
+}
+main{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  gap:10px;
+
+   @mixin flex-center(){
+    background-size: cover;
+    background-position: center;
+   }
+
+  section{
+    height: 100%;
+    flex-grow: 1;
+    background-color: red;
+    border: 2px solid white;
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    cursor: pointer;
+  }
+
+   section:hover{
+    flex-grow: 2;           //this is the new propery which have been here used to make the growing transition on an image
+   }
+
+
+  section:nth-child(1){
+    background-image: url(./Iron-man.jpg);
+    @include flex-center();
+  }
+  
+  section:nth-child(2){
+    background-image: url(./spidy-2.jpg);
+    @include flex-center();
+  }
+  
+  section:nth-child(3){
+    background-image: url(./thor.jpg);
+    @include flex-center();
+  }
+  
+  section:nth-child(4){
+    background-image: url(./deadpool-1.jpg);
+    @include flex-center();
+  }
+  
+  section:nth-child(5){
+    background-image: url(./halku.jpg);
+    @include flex-center();
+  }
+}
